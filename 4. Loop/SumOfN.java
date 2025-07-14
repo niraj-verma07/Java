@@ -14,4 +14,4 @@ public class SumOfN {
 
         System.out.println("Sum = " + sum);
     }
-}0
+}
