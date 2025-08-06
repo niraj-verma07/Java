@@ -28,8 +28,43 @@ public class TrappingRainwater {
         return trappedWater;
 
     }
+
+    //2nd Way of trappingWater
+    public static int findTotalWater(int arr[], int n){
+        int lmax[] = new int[n];
+        int max=0;
+        for(int i=0;i<n; i++){
+            max = Math.max(max, arr[i]);
+            lmax[i] = max;
+        }
+
+        int rmax[] = new int[n];
+        max =0;
+        for(int i = n-1; i>=0; i--){
+            max = Math.max(max, arr[i]);
+            rmax[i] = max;
+        }
+
+        int totalWater =0;
+        for(int i=0; i<n; i++){
+            int lb=lmax[i];
+            int rb = rmax[i];
+
+            int min = Math.min(lb, rb);
+            int currentWater = min - arr[i];
+            totalWater = totalWater + currentWater;
+        }
+
+        return totalWater;
+
+    }
+
     public static void main(String[] args) {
-        int height[] = {4,2,0,6,3,2,5};
-        System.out.println(trapRainwater(height));
+        // int height[] = {4,2,0,6,3,2,5};
+        // System.out.println(trapRainwater(height));
+
+        int arr[] = {3,0,2,0,4};
+        int n = arr.length;
+        System.out.println(findTotalWater(arr, n));;
     }
 }
