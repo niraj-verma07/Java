@@ -15,6 +15,12 @@ if(newBit == 0){
 }else{
     return setIthBit(n, i);
 }
+
+// 2nd Approuch
+// n = clearIthBit(n,i);
+// int BitMask = newBitMask << i;
+// return n | BitMask;
+
     }
     public static void main(String[] args) {
         System.out.println(updateIthBit(10, 2, 1));
