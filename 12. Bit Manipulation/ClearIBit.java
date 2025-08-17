@@ -7,4 +7,3 @@ public class ClearIBit {
         System.out.println(clearIBit(15, 2));
     }
 }
- 
