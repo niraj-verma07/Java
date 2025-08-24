@@ -1,7 +1,8 @@
-public class Inheritance {
+public class Hierarchial {
     public static void main(String[] args) {
         Fish shark = new Fish();
         shark.eat();
+        
     }
 }
 
@@ -18,7 +19,12 @@ class Animal {
     }
 }
 
-// Derived Class (Child)
+
+class Mammal extends Animal {
+    void walks() {
+        System.out.println("Walks");
+    }
+}
 
 class Fish extends Animal {
     int fins;
@@ -27,12 +33,6 @@ class Fish extends Animal {
         System.out.println("Swims in water");
     }
 
-}
-
-class Mammal extends Animal {
-    void walks() {
-        System.out.println("Walks");
-    }
 }
 
 class Birds extends Animal {
