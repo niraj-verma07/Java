@@ -11,7 +11,18 @@ public class Recursion {
         printNum(n - 1);
     }
 
+    public static void printInc(int n) {
+        if (n == 1) {
+            System.out.print(n + " ");
+            return;
+        }
+        printInc(n - 1);
+
+        System.out.print(n + " ");
+    }
+
     public static void main(String[] args) {
         printNum(10);
+        printInc(10);
     }
 }
