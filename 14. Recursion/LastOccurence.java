@@ -1,3 +1,5 @@
+//Write to find the first occurence of an element in an array
+
 public class LastOccurence {
 
     public static int lastOcc(int arr[], int key, int i) {
