@@ -1,4 +1,4 @@
-//Write to find the first occurence of an element in an array
+//Write to find the last occurence of an element in an array
 
 public class LastOccurence {
 
